@@ -20,7 +20,7 @@ def on_connect(client, userdata, flags, rc):
     print("🔗 Connected! rc =", rc)
     if rc == 0:
         data = {
-            "rooms": ["카페", "3-1반", "회의실", "강당", "승환이 얼굴"]
+            "rooms": ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7", "2-8", "2-9", "2-10"]
         }
         payload = json.dumps(data, ensure_ascii=False)
         client.publish(TOPIC, payload)

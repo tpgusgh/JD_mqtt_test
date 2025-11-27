@@ -5,7 +5,7 @@ import time
 
 MQTT_BROKER = "mqtt-web.mieung.kr"
 MQTT_PORT = 443
-TOPIC = "order/finish"
+TOPIC = "echo/record"
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code:", rc)
@@ -35,10 +35,10 @@ def main():
     time.sleep(1)
 
     # === 테스트할 주문번호 입력 ===
-    order_id = "0001"
+    name = "cafe"
 
     payload = {
-        "order_id": order_id
+        "name": name
     }
 
     print("📤 발행 payload:", payload)
